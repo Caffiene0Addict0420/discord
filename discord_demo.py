@@ -1,14 +1,14 @@
 from discord_webhook import DiscordWebhook
 
-def get_str(old_price, new_price, name, link):
+def get_str(old_price, new_price, name, link, type = "Discount"):
     my_text = """
-    **__Product Found__**
+**__%s Found__**
     
-    **Name:** %s
-    **Old Price:** %s
-    **New Price:** %s
-    **Link:** %s
-    """ % (name, old_price, new_price, link)
+**Product:** %s
+**Old Price:** ~~%s~~
+**New Price:** %s
+**Link:** %s
+    """ % (type, name, old_price, new_price, link)
     return my_text
 
 def get_webhook():
